@@ -7,7 +7,7 @@ output: html_document
 First step is loading the data-
 
 ```{r}
-activities<-read.csv("C:/Users/Sriram V/Documents/R resource folder/activity.csv",header = TRUE)
+activities<-read.csv("D:/activity.csv",header = TRUE)
 ```
 Transformation using as.date function-
 
@@ -49,7 +49,6 @@ Imputing missing data with mean-
 Calculate and report the total number of missing values in the dataset
 
 ```{r}
-library(Hmisc)
 na_count<-nrow(activities[is.na(activities),])
 ```
 data set with missing values imputed with mean-
@@ -96,3 +95,5 @@ qplot(interval,steps,data = activities_days_daywise,geom = "line",facets = nbrs 
 ```
 
 Yeah, there is a perceivable difference between them.
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
